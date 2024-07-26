@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={inter.className}>
+      <body>
         <MantineProvider>{children}</MantineProvider>
       </body>
     </html>
