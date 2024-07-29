@@ -30,7 +30,7 @@ const AboutPage = () => {
         </Badge>
       </Group>
       <Grid gutter={{ base: 5, xs: "md", md: "xl", xl: 100 }} grow>
-        <Grid.Col span={{ base: 12, md: 6, lg: 6 }}>
+        <Grid.Col span={{ base: 12, md: 6, lg: 6 }} mb={50}>
           <Title>Get to know me!</Title>
           <Text c="dimmed" mt="md" ta="justify">
             I'm a Fullstack Web Developer with a focus on building and managing
