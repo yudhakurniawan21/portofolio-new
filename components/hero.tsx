@@ -38,10 +38,8 @@ export function HeroBullets() {
             </span>
           </Title>
           <Text c="dimmed" mt="md">
-            with over 5 years of experience in crafting robust and scalable web
-            applications. With a strong foundation in both front-end and
-            back-end technologies, I am passionate about delivering seamless and
-            efficient solutions.
+            A Result-Oriented Web Developer building and managing Websites and
+            Web Applications that leads to the success of the overall product.
           </Text>
 
           <Group mt={30}>
@@ -51,8 +49,10 @@ export function HeroBullets() {
               className={classes.control}
               variant="gradient"
               gradient={{ from: "blue", to: "purple" }}
+              component="a"
+              href="#contact"
             >
-              Get started
+              Get contact
             </Button>
             <Button
               variant="default"

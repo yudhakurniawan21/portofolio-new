@@ -1,5 +1,6 @@
 "use client";
 
+import AboutPage from "@/components/about";
 import { GetInTouchSimple } from "@/components/contact";
 import { FeaturesCards } from "@/components/features";
 import { FooterSocial } from "@/components/footer";
@@ -12,6 +13,7 @@ const LandingPage = () => {
     <>
       <HeaderSimple />
       <HeroBullets />
+      <AboutPage />
       <FeaturesCards />
       <GetInTouchSimple />
       <FooterSocial />

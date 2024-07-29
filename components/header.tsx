@@ -5,10 +5,10 @@ import { useDisclosure } from "@mantine/hooks";
 import classes from "./header.module.css";
 
 const links = [
-  { link: "/about", label: "Features" },
-  { link: "/pricing", label: "Pricing" },
-  { link: "/learn", label: "Learn" },
-  { link: "/community", label: "Community" },
+  { link: "#home", label: "Home" },
+  { link: "#about", label: "About" },
+  { link: "#experience", label: "Experience" },
+  { link: "#contact", label: "Contact" },
 ];
 
 export function HeaderSimple() {
@@ -22,7 +22,7 @@ export function HeaderSimple() {
       className={classes.link}
       data-active={active === link.link || undefined}
       onClick={(event) => {
-        event.preventDefault();
+        // event.preventDefault();
         setActive(link.link);
       }}
     >
@@ -32,7 +32,7 @@ export function HeaderSimple() {
 
   return (
     <header className={classes.header}>
-      <Container size="lg" className={classes.inner}>
+      <Container size="lg" className={classes.inner} id="home">
         {/* <MantineLogo size={28} /> */}
         <Group gap={5} visibleFrom="xs">
           {items}

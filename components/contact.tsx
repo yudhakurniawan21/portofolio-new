@@ -6,6 +6,7 @@ import {
   Title,
   Button,
   Container,
+  Badge,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 
@@ -25,7 +26,16 @@ export function GetInTouchSimple() {
   });
 
   return (
-    <Container size="lg" mt={50}>
+    <Container size="lg" mt={50} id="contact">
+      <Group justify="center" my={20}>
+        <Badge
+          variant="gradient"
+          gradient={{ from: "blue", to: "purple" }}
+          size="lg"
+        >
+          Contact us
+        </Badge>
+      </Group>
       <form onSubmit={form.onSubmit(() => {})}>
         <Title
           order={2}
@@ -75,7 +85,13 @@ export function GetInTouchSimple() {
         />
 
         <Group justify="center" mt="xl">
-          <Button type="submit" size="md">
+          <Button
+            type="submit"
+            radius="xl"
+            size="md"
+            variant="gradient"
+            gradient={{ from: "blue", to: "purple" }}
+          >
             Send message
           </Button>
         </Group>
