@@ -30,7 +30,9 @@ export function FooterSocial() {
       <Container size="lg" className={classes.inner}>
         {/* <MantineLogo size={28} /> */}
         {/* <Image src={imageNext.src} width={20} height={20} /> */}
-        <Avatar radius="xl" />
+        <Avatar radius="xl" color="indigo">
+          YK
+        </Avatar>
         <Text>{new Date().getFullYear()}</Text>
         <Group
           gap={0}

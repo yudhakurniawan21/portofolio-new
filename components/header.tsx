@@ -13,6 +13,7 @@ import {
   ScrollArea,
   UnstyledButton,
   useMantineTheme,
+  Avatar,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 // import { MantineLogo } from "@mantinex/mantine-logo";
@@ -52,6 +53,9 @@ export function HeaderSimple() {
     <header className={classes.header}>
       <Container size="lg" className={classes.inner} id="home">
         {/* <MantineLogo size={28} /> */}
+        <Avatar radius="xl" color="indigo">
+          YK
+        </Avatar>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
