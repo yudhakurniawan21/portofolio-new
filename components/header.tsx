@@ -1,8 +1,23 @@
 import { useState } from "react";
-import { Container, Group, Burger } from "@mantine/core";
+import {
+  Container,
+  Group,
+  Burger,
+  Drawer,
+  Box,
+  Button,
+  Center,
+  Collapse,
+  Divider,
+  rem,
+  ScrollArea,
+  UnstyledButton,
+  useMantineTheme,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 // import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./header.module.css";
+import { IconChevronDown } from "@tabler/icons-react";
 
 const links = [
   { link: "#home", label: "Home" },
@@ -12,7 +27,10 @@ const links = [
 ];
 
 export function HeaderSimple() {
+  const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
@@ -38,7 +56,35 @@ export function HeaderSimple() {
           {items}
         </Group>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Burger
+          opened={drawerOpened}
+          onClick={toggleDrawer}
+          hiddenFrom="xs"
+          size="sm"
+        />
+        <Drawer
+          opened={drawerOpened}
+          onClose={closeDrawer}
+          size="100%"
+          padding="md"
+          title="Yudha Kurniawan"
+          hiddenFrom="sm"
+          zIndex={1000000}
+        >
+          <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+            <Divider my="sm" />
+            {links.map((item, index) => (
+              <a
+                href={item.link}
+                className={classes.link}
+                key={index}
+                onClick={toggleDrawer}
+              >
+                {item.label}
+              </a>
+            ))}
+          </ScrollArea>
+        </Drawer>
       </Container>
     </header>
   );
